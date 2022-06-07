@@ -1,0 +1,50 @@
+/* Variables */
+h1 {
+  color: red;
+  background-color: beige;
+  text-align: center;
+}
+
+body {
+  background: black;
+}
+
+section main {
+  width: 100%;
+  display: inline-block;
+}
+section article {
+  height: 200px;
+  width: 70%;
+  background-color: orange;
+  float: left;
+  margin-top: 10px;
+}
+section h2 {
+  text-align: center;
+  padding-top: 10px;
+  text-decoration: underline;
+}
+section p {
+  color: #fff;
+  padding: 5px 10px 5px 10px;
+}
+
+div aside {
+  width: 25%;
+  background-color: brown;
+  height: 300px;
+  float: right;
+  display: inline-block;
+  margin: 10px;
+}
+div h3 {
+  text-align: center;
+  text-decoration: underline;
+}
+div p {
+  color: #fff;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=estilos.css.map */
