@@ -3,34 +3,43 @@
 /* Variables */
 
 
-$color1: #fff;
-$color2: black;
-$color3: orange;
-$color4: brown;
+// $color1: #fff;
+// $color2: black;
+// $color3: orange;
+// $color4: brown;
 
+
+$color1: (
+    primero: #fff,
+    segundo: #000 ,
+    tercero: orange,
+    cuarto: brown,
+    quinto: red,
+    sexto: beige,
+);
 
 
 h1 {
-    color: red;
-    background-color: beige;
+    color: map-get($color1, quinto );
+    background-color: map-get($color1, sexto );
     text-align: center;
 }
 
 body {
-    background: $color2;
+    background: map-get($color1, segundo );
 }
 
 section {
     
-    main {
+    #main {
         width: 100%;
         display: inline-block;
     }
     
-    article {
+    .otros {
         height: 200px;
         width: 70%;
-        background-color: $color3;
+        background-color: map-get($color1, tercero );
         float: left;
         margin-top: 10px;
     }
@@ -40,7 +49,7 @@ section {
         text-decoration: underline;
     }
     p {
-        color: $color1;
+        color: map-get($color1, primero );
         padding: 5px 10px 5px 10px;
     }
 }
@@ -50,9 +59,8 @@ div {
     
     aside {
         width: 25%;
-        background-color: $color4;
+        background-color: map-get($color1, cuarto );
         height: 300px;
-        float: right;
         display: inline-block;
         margin: 10px;
     }
@@ -63,7 +71,49 @@ div {
     }
 
     p {
-        color: $color1;
+        color: map-get($color1, primero );
         padding: 10px;
     }
 }
+
+
+.otros--nuevo {
+    @extend .otros;
+
+    width: 100%;
+    background-color: map-get($color1, tercero );
+
+    h4 {
+        color: map-get($color1, segundo );
+        text-decoration: underline;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 10px;
+    }
+
+    p {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
+
+
+@mixin cosas ($height, $width, $bcolor,) {
+    height: $height;
+    width: $width;
+    background-color: $bcolor;
+}
+
+.caja1 {
+    @include cosas (100px, 300px, orange);
+    color: #fff;
+    font-size: 20px;
+}
+
+.caja2 {
+    @include cosas (150px, 200px, blue);
+    color: #fff;
+    font-size: 20px;
+}
+
+

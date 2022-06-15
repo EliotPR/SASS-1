@@ -1,0 +1,12 @@
+
+
+    CAMBIOS SASS
+
+- Agregué MAPS para el uso de colores usando la variable "$color1"
+- Hice uso de map-get
+- Creé una clase llamada "otros" 
+  y en ella use @extend para usar datos de ella en un nuevo div
+- Realice uso de @mixin "cosas" para la altura, ancho y color de fondo
+- Para el SEO usé palabras que estan incluidas en mi proyecto real 
+ (una pagina de desarrollador), como "desarrollo, software, web,
+  aplicación movil, etc...
